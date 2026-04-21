@@ -59,7 +59,7 @@ export default function ConstructionDetailPage({ params }: { params: Promise<{ i
       status: "not_started",
     });
     setShowFloorForm(false);
-    setFloorForm({ name: "", plannedVolume: "", unit: "m²", contractValue: "", retentionRate: construction.retentionRate.toString() });
+    setFloorForm({ name: "", plannedVolume: "", unit: "m²", contractValue: "", retentionRate: (construction?.retentionRate ?? 5).toString() });
   }
 
   return (
